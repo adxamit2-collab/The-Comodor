@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Comodor | Authentic Italian Dining in Byfleet, Surrey</title>
+  <meta name="description"
+    content="The Comodor – authentic Italian family restaurant in Byfleet, Surrey. Pizza, pasta, steak & more. Book a table online or call 01932 354 888." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { gold: '#C9A84C', 'gold-light': '#F0D080', dark: '#1A0A00', charcoal: '#2C1810', crimson: '#8B1A1A' }, fontFamily: { serif: ['Playfair Display', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" aria-label="Main navigation">
+    <div class="navbar-inner max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between" style="height:clamp(64px,8vw,80px)">
+      <a href="#hero" class="flex items-center gap-3">
+        <span class="text-gold text-2xl"><i class="fas fa-utensils"></i></span>
+        <div>
+          <div class="font-serif text-xl font-bold text-white tracking-wide">The Comodor</div>
+          <div class="text-xs text-gold/70 tracking-widest uppercase">Byfleet · Surrey</div>
+        </div>
+      </a>
+      <ul class="hidden md:flex items-center gap-8" id="nav-links">
+        <li><a href="#about" class="nav-link text-sm text-white/80 hover:text-gold transition-colors">About</a></li>
+        <li><a href="#menu" class="nav-link text-sm text-white/80 hover:text-gold transition-colors">Menu</a></li>
+        <li><a href="#gallery" class="nav-link text-sm text-white/80 hover:text-gold transition-colors">Gallery</a></li>
+        <li><a href="#reviews" class="nav-link text-sm text-white/80 hover:text-gold transition-colors">Reviews</a></li>
+        <li><a href="#faq" class="nav-link text-sm text-white/80 hover:text-gold transition-colors">FAQ</a></li>
+        <li><a href="#contact" class="nav-link text-sm text-white/80 hover:text-gold transition-colors">Contact</a></li>
+      </ul>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="https://comodorbyfleet.uk/" target="_blank" class="btn-outline text-xs px-5 py-2.5">Order Online</a>
+        <a href="#booking" class="btn-primary text-xs px-5 py-2.5">Book a Table</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-white p-2 rounded-lg transition-colors hover:bg-white/10 focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" aria-hidden="true">
+      <div class="px-6 py-5">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#menu" class="mobile-nav-link">Menu</a>
+        <a href="#gallery" class="mobile-nav-link">Gallery</a>
+        <a href="#reviews" class="mobile-nav-link">Reviews</a>
+        <a href="#faq" class="mobile-nav-link">FAQ</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="#booking" class="btn-primary w-full text-center block" style="margin-top:1rem;font-size:.85rem">Book a Table</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center"
+      style="background-image:url('amit.jpg.png')">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/60 to-dark"></div>
+    <div class="orb w-96 h-96 top-20 -left-40 opacity-20"
+      style="background:radial-gradient(circle,#C9A84C,transparent)"></div>
+    <div class="orb w-80 h-80 bottom-40 -right-32 opacity-15"
+      style="background:radial-gradient(circle,#8B1A1A,transparent)"></div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto" style="width:100%">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/10 text-gold text-xs tracking-widest uppercase mb-8">
+        <i class="fas fa-star text-xs"></i> Family Run · Est. 25 Years
+      </div>
+      <h1 class="hero-title font-serif font-bold leading-tight mb-6" style="font-size:clamp(2rem,7vw,5rem)">
+        <span class="block text-white">Authentic Italian</span>
+        <span class="block gold-text">Dining in Byfleet</span>
+      </h1>
+      <p class="text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed" style="font-size:clamp(0.9rem,2.5vw,1.125rem)">
+        25 years of bringing the finest Italian flavours to the heart of Surrey. Wood-fired pizzas, handmade pasta, and
+        warm hospitality — every single visit.
+      </p>
+      <div class="hero-cta-group flex flex-col sm:flex-row items-center justify-center gap-4" style="flex-wrap:wrap">
+        <a href="#booking" class="btn-primary px-8 py-4">
+          <i class="fas fa-calendar-check"></i> Book a Table
+        </a>
+        <a href="#menu" class="btn-outline px-8 py-4">
+          <i class="fas fa-book-open"></i> View Menu
+        </a>
+        <a href="https://comodorbyfleet.uk/" target="_blank"
+          class="btn-outline px-8 py-4">
+          <i class="fas fa-shopping-bag"></i> Order Online
+        </a>
+      </div>
+      <div class="hero-hours mt-12 text-white/50">
+        <div class="flex items-center gap-2"><i class="fas fa-clock text-gold"></i> Mon–Thu: 16:30–22:00</div>
+        <div class="flex items-center gap-2"><i class="fas fa-clock text-gold"></i> Fri–Sat: 16:30–23:00</div>
+        <div class="flex items-center gap-2"><i class="fas fa-clock text-gold"></i> Sun: 12:30–20:00</div>
+      </div>
+    </div>
+    <a href="#about"
+      class="absolute bottom-8 left-1/2 -translate-x-1/2 text-gold/50 hover:text-gold animate-bounce transition-colors">
+      <i class="fas fa-chevron-down text-xl"></i>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-pad relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-charcoal via-dark to-dark"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+        <div>
+          <div class="tag mb-4">Our Story</div>
+          <h2 class="font-serif font-bold mb-6 leading-tight" style="font-size:clamp(1.75rem,5vw,2.75rem)">
+            A Taste of Italy, <span class="gold-text">Right Here in Surrey</span>
+          </h2>
+          <p class="text-white/70 leading-relaxed mb-5">For over 25 years, The Comodor has been a beloved fixture in
+            Byfleet, Surrey. Our family-run restaurant was born from a passion for authentic Italian cooking — recipes
+            passed down through generations, prepared with the finest seasonal ingredients.</p>
+          <p class="text-white/70 leading-relaxed mb-8">From wood-fired pizzas to hand-rolled pasta and premium cuts of
+            steak, every dish is crafted with love and attention to detail. We believe great food brings people
+            together, and every meal here is a celebration.</p>
+          <div class="about-stats grid grid-cols-3 gap-4 mb-8">
+            <div class="text-center glass-card p-4 rounded-xl">
+              <div class="font-serif text-3xl font-bold gold-text">25+</div>
+              <div class="text-xs text-white/50 mt-1">Years Serving</div>
+            </div>
+            <div class="text-center glass-card p-4 rounded-xl">
+              <div class="font-serif text-3xl font-bold gold-text">50+</div>
+              <div class="text-xs text-white/50 mt-1">Menu Items</div>
+            </div>
+            <div class="text-center glass-card p-4 rounded-xl">
+              <div class="font-serif text-3xl font-bold gold-text">★ 4.8</div>
+              <div class="text-xs text-white/50 mt-1">Google Rating</div>
+            </div>
+          </div>
+          <a href="#booking" class="btn-primary inline-flex px-7 py-3.5">Reserve Your Table</a>
+        </div>
+        <div class="relative about-img-wrap" style="padding-bottom:1.5rem">
+          <div class="rounded-2xl overflow-hidden aspect-[4/3]">
+            <img src="amt.jpg.avif"
+              alt="Restaurant interior" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="about-badge glass-card p-4 rounded-xl flex items-center gap-3 shadow-xl">
+            <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center text-gold flex-shrink-0"><i
+                class="fas fa-award text-lg"></i></div>
+            <div>
+              <div class="text-white font-semibold text-sm">Family Owned</div>
+              <div class="text-white/50 text-xs">Since 1999</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="section-pad relative">
+    <div class="absolute inset-0 bg-dark"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-10">
+        <div class="tag mb-4">Our Menu</div>
+        <h2 class="font-serif font-bold mb-4" style="font-size:clamp(1.75rem,5vw,2.75rem)">Discover Our <span class="gold-text">Italian Kitchen</span></h2>
+        <p class="text-white/60 max-w-xl mx-auto" style="font-size:clamp(0.85rem,2.5vw,1rem)">From crispy starters to indulgent desserts — everything made fresh with the finest ingredients.</p>
+      </div>
+      <!-- Category Tabs -->
+      <div class="menu-tabs-wrapper" id="menu-tabs" role="tablist"></div>
+      <!-- Menu Grid -->
+      <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section-pad relative overflow-hidden bg-charcoal">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-10">
+        <div class="tag mb-4">Gallery</div>
+        <h2 class="font-serif font-bold mb-4" style="font-size:clamp(1.75rem,5vw,2.75rem)">A Feast for <span class="gold-text">the Eyes</span></h2>
+      </div>
+      <div class="gallery-grid grid gap-3 md:gap-4" style="grid-template-columns:repeat(2,1fr)">
+        <div class="gallery-img aspect-square"><img
+            src="https://grub24s3.s3.eu-west-2.amazonaws.com/upload/1699540482-IMG-20231108-WA0021-min.jpg"
+            alt="Pizza" loading="lazy" /></div>
+        <div class="gallery-img aspect-square"><img
+            src="https://grub24s3.s3.eu-west-2.amazonaws.com/upload/1699540482-IMG-20231108-WA0018-min.jpg" alt="Pasta" loading="lazy" /></div>
+        <div class="gallery-img aspect-square"><img
+            src="https://grub24s3.s3.eu-west-2.amazonaws.com/upload/1699540482-IMG-20231108-WA0020-min.jpg" alt="Steak" loading="lazy" /></div>
+        <div class="gallery-img aspect-square"><img
+            src="https://grub24s3.s3.eu-west-2.amazonaws.com/upload/1699540267-IMG-20231108-WA0016-min.jpg"
+            alt="Food" loading="lazy" /></div>
+        <div class="gallery-img aspect-square"><img
+            src="https://grub24s3.s3.eu-west-2.amazonaws.com/upload/1699541061-IMG-20231108-WA0026-min.jpg"
+            alt="Cocktail" loading="lazy" /></div>
+        <div class="gallery-img aspect-square"><img
+            src="https://grub24s3.s3.eu-west-2.amazonaws.com/upload/1699541061-IMG-20231108-WA0024-min.jpg"
+            alt="Restaurant ambiance" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="section-pad relative bg-dark">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-10">
+        <div class="tag mb-4">Testimonials</div>
+        <h2 class="font-serif font-bold mb-4" style="font-size:clamp(1.75rem,5vw,2.75rem)">What Our <span class="gold-text">Guests Say</span></h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" id="reviews-grid"></div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="section-pad relative overflow-hidden bg-charcoal">
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 blur-3xl"
+      style="background:radial-gradient(circle,#C9A84C,transparent)"></div>
+    <div class="relative z-10 max-w-3xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-10">
+        <div class="tag mb-4">Reservations</div>
+        <h2 class="font-serif font-bold mb-4" style="font-size:clamp(1.75rem,5vw,2.75rem)">Book Your <span class="gold-text">Table</span></h2>
+        <p class="text-white/60" style="font-size:clamp(0.85rem,2.5vw,1rem)">Complete the form below or call us on <a href="tel:01932354888" class="text-gold hover:underline">01932 354 888</a></p>
+      </div>
+      <div class="glass-card p-8 md:p-10 rounded-2xl">
+        <form id="booking-form" class="space-y-5">
+          <div class="booking-grid-2 grid sm:grid-cols-2 gap-4 md:gap-5">
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2">Full Name *</label>
+              <input type="text" id="b-name" required placeholder="Your name" class="form-input" />
+            </div>
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2">Email *</label>
+              <input type="email" id="b-email" required placeholder="your@email.com" class="form-input" />
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2">Phone *</label>
+              <input type="tel" id="b-phone" required placeholder="07xxx xxxxxx" class="form-input" />
+            </div>
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2">Party Size *</label>
+              <select id="b-guests" required class="form-input">
+                <option value="">Guests</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8+</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2">Date *</label>
+              <input type="date" id="b-date" required class="form-input" />
+            </div>
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2">Time *</label>
+              <select id="b-time" required class="form-input">
+                <option value="">Select time</option>
+                <option>12:30</option>
+                <option>13:00</option>
+                <option>13:30</option>
+                <option>14:00</option>
+                <option>16:30</option>
+                <option>17:00</option>
+                <option>17:30</option>
+                <option>18:00</option>
+                <option>18:30</option>
+                <option>19:00</option>
+                <option>19:30</option>
+                <option>20:00</option>
+                <option>20:30</option>
+                <option>21:00</option>
+                <option>21:30</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs text-white/50 uppercase tracking-wider mb-2">Special Requests</label>
+            <textarea id="b-notes" rows="3" placeholder="Allergies, dietary requirements, special occasions..."
+              class="form-input resize-none"></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full py-4 text-base">
+            <i class="fas fa-calendar-check mr-2"></i> Confirm Reservation
+          </button>
+        </form>
+        <div id="booking-success" class="hidden text-center py-8">
+          <div class="text-5xl text-gold mb-4"><i class="fas fa-check-circle"></i></div>
+          <h3 class="font-serif text-2xl font-bold mb-2">Booking Request Received!</h3>
+          <p class="text-white/60">Thank you! We'll contact you shortly to confirm your reservation.<br />Or call us
+            directly: <a href="tel:01932354888" class="text-gold">01932 354 888</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-pad bg-dark">
+    <div class="max-w-3xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-10">
+        <div class="tag mb-4">FAQ</div>
+        <h2 class="font-serif font-bold mb-4" style="font-size:clamp(1.75rem,5vw,2.75rem)">Common <span class="gold-text">Questions</span></h2>
+      </div>
+      <div id="faq-list" class="space-y-3"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT & HOURS -->
+  <section id="contact" class="section-pad bg-charcoal">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-10">
+        <div class="tag mb-4">Find Us</div>
+        <h2 class="font-serif font-bold mb-4" style="font-size:clamp(1.75rem,5vw,2.75rem)">Location <span class="gold-text">&amp; Hours</span></h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="space-y-6">
+          <div class="glass-card p-6 rounded-2xl">
+            <h3 class="font-serif text-xl font-bold mb-4 text-gold">Opening Hours</h3>
+            <div class="space-y-0">
+              <div class="flex justify-between items-center text-sm py-2.5 border-b border-white/8">
+                <span class="text-white/60">Monday</span>
+                <span class="font-semibold tabular-nums">16:30 – 22:00</span>
+              </div>
+              <div class="flex justify-between items-center text-sm py-2.5 border-b border-white/8">
+                <span class="text-white/60">Tuesday</span>
+                <span class="font-semibold tabular-nums">16:30 – 22:00</span>
+              </div>
+              <div class="flex justify-between items-center text-sm py-2.5 border-b border-white/8">
+                <span class="text-white/60">Wednesday</span>
+                <span class="font-semibold tabular-nums">16:30 – 22:00</span>
+              </div>
+              <div class="flex justify-between items-center text-sm py-2.5 border-b border-white/8">
+                <span class="text-white/60">Thursday</span>
+                <span class="font-semibold tabular-nums">16:30 – 22:00</span>
+              </div>
+              <div class="flex justify-between items-center text-sm py-2.5 border-b border-white/8">
+                <span class="text-white/60">Friday</span>
+                <span class="font-semibold text-gold tabular-nums">16:30 – 23:00</span>
+              </div>
+              <div class="flex justify-between items-center text-sm py-2.5 border-b border-white/8">
+                <span class="text-white/60">Saturday</span>
+                <span class="font-semibold text-gold tabular-nums">16:30 – 23:00</span>
+              </div>
+              <div class="flex justify-between items-center text-sm py-2.5">
+                <span class="text-white/60">Sunday</span>
+                <span class="font-semibold tabular-nums">12:30 – 20:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl">
+            <h3 class="font-serif text-xl font-bold mb-4 text-gold">Contact Us</h3>
+            <div class="space-y-4 text-sm">
+              <a href="tel:01932354888" class="flex items-center gap-3 text-white/70 hover:text-gold transition-colors">
+                <div class="w-9 h-9 bg-gold/10 rounded-full flex items-center justify-center text-gold"><i
+                    class="fas fa-phone"></i></div>
+                01932 354 888
+              </a>
+              <a href="mailto:taraneh1974@yahoo.co.uk"
+                class="flex items-center gap-3 text-white/70 hover:text-gold transition-colors">
+                <div class="w-9 h-9 bg-gold/10 rounded-full flex items-center justify-center text-gold flex-shrink-0"><i
+                    class="fas fa-envelope"></i></div>
+                <span class="contact-email">taraneh1974@yahoo.co.uk</span>
+              </a>
+              <div class="flex items-start gap-3 text-white/70">
+                <div
+                  class="w-9 h-9 bg-gold/10 rounded-full flex items-center justify-center text-gold flex-shrink-0 mt-0.5">
+                  <i class="fas fa-map-marker-alt"></i></div>
+                2-4 Oyster Ln, Byfleet,
+                <br> United Kingdom KT14 7DU
+              </div>
+              <div class="flex items-center gap-3 text-white/70">
+                <div class="w-9 h-9 bg-gold/10 rounded-full flex items-center justify-center text-gold"><i
+                    class="fas fa-car"></i></div>
+                Free street parking available
+              </div>
+            </div>
+            <div class="contact-btn-row mt-4 pt-4 border-t border-white/10 flex gap-3">
+              <a href="tel:01932354888" class="btn-primary flex-1 text-center" style="font-size:clamp(0.75rem,2vw,0.85rem);padding:.6rem 1rem"><i class="fas fa-phone mr-2"></i>Call Now</a>
+              <a href="https://api.whatsapp.com/send?phone=441932354888&text=Hello%2C%20I'd%20like%20to%20book%20a%20table"
+                target="_blank"
+                class="btn-outline flex-1 text-center" style="border-color:rgba(34,197,94,.5);color:#4ade80;font-size:clamp(0.75rem,2vw,0.85rem);padding:.6rem 1rem"><i class="fab fa-whatsapp mr-2"></i>WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <div class="map-container rounded-2xl overflow-hidden shadow-xl" style="height:clamp(220px,40vw,384px)">
+          <iframe title="The Comodor Location"
+            src="https://maps.google.com/maps?q=2-4+Cobb+House%2C+Oyster+Lane%2C+Byfleet%2C+KT14+7DU&output=embed"
+            width="100%" height="100%" style="border:0" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark border-t border-white/10" style="padding:clamp(2.5rem,6vw,3.5rem) clamp(1rem,4vw,2rem)">
+    <div class="max-w-7xl mx-auto">
+      <div class="footer-grid grid md:grid-cols-3 gap-6 md:gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-gold text-xl"><i class="fas fa-utensils"></i></span>
+            <span class="font-serif text-lg font-bold">The Comodor</span>
+          </div>
+          <p class="text-white/50 text-sm leading-relaxed">Authentic Italian family dining in the heart of Byfleet,
+            Surrey. Serving our community with passion for 25 years.</p>
+        </div>
+        <div>
+          <h4 class="text-gold text-sm uppercase tracking-widest font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-white/60">
+            <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+            <li><a href="#menu" class="hover:text-gold transition-colors">Our Menu</a></li>
+            <li><a href="#booking" class="hover:text-gold transition-colors">Book a Table</a></li>
+            <li><a href="#contact" class="hover:text-gold transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gold text-sm uppercase tracking-widest font-semibold mb-4">We Accept</h4>
+          <p class="text-white/50 text-sm mb-3">Cash &amp; Card payments. <span class="text-white/30">American Express
+              not accepted.</span></p>
+          <div class="flex gap-3 text-2xl text-white/40">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3" style="font-size:clamp(0.65rem,1.8vw,0.75rem);color:rgba(255,255,255,.3)">
+        <p>© 2025 The Comodor. All rights reserved. | 2-4 Cobb House, Oyster Lane, Byfleet, KT14 7DU</p>
+        <p>Vegan &amp; Gluten-Free options available. Please inform your server of any allergies.</p>
+      </div>
+      <div class="footer-credit">Developed by <span>Adx Amit</span></div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-btns" style="position:fixed;bottom:1.25rem;right:1.25rem;z-index:50;display:flex;flex-direction:column;gap:.6rem">
+    <a href="tel:01932354888" class="floating-btn bg-gold hover:bg-gold-light text-dark shadow-lg" title="Call Us">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=441932354888&text=Hello%2C%20I'd%20like%20to%20book%20a%20table%20at%20The%20Comodor"
+      target="_blank" class="floating-btn bg-green-500 hover:bg-green-400 text-white shadow-lg" title="WhatsApp">
+      <i class="fab fa-whatsapp text-xl"></i>
+    </a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
